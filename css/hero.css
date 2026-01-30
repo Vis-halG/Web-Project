@@ -1,0 +1,144 @@
+
+.heroSection {
+    display: flex;
+}
+
+.heroSection .heroMain {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--cultured);
+}
+
+/* Hero Section Content */ 
+.heroMain .heroContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.heroMain .mainSubHeading {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.heroMain .mainHeading {
+    font-weight: 700;
+    font-size: clamp(43px, 5vw, 68px);
+    font-family: "Playfair Display", serif;
+}
+
+.heroMain .mainPrice {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.heroMain .mainPrice span {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Hero Section Image */ 
+.heroMain .heroImageContainer img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.mainButton {
+    position: relative;
+    color: white;
+    background-color: var(--rasin-black);
+    width: 185px;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: none;
+}
+.mainButton .fa-circle {
+    font-size: 8px;
+}
+.mainButton .fa-circle.circleOne {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.mainButton .fa-circle.circleTwo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.mainButton:hover {
+    transform: scale(1.05);
+}
+.mainButton:hover .fa-circle {
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* Hero Section Side Parts */ 
+.heroSection .heroLeft {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+.heroLeft .bigNumber {
+    position: relative;
+    left: -10px;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    transform: rotate(270deg);
+    transform-origin: center;
+}
+
+.heroLeft .smallNumber {
+    padding: 5px 10px;
+    transform: rotate(270deg);
+    transform-origin: center;
+    color: white;
+    background: #424242;
+}
+
+.heroSection .heroRight {
+    display: none;
+    width: 130px;
+}
+
+@media screen and (min-width: 768px) {
+    .heroSection .heroMain {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .heroSection {
+        min-height: 80svh;
+    }
+
+    .heroSection .heroRight,
+    .heroSection .heroLeft {
+        display: flex;
+    }
+
+    .heroSection .heroLeft {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}

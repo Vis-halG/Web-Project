@@ -1,0 +1,76 @@
+ /* Offer section styles */
+.offerSection {
+    padding: 20px 30px 0;
+}
+
+.offerSection .offerContainer {
+    position: relative;
+    top: 100px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.offerContainer .offerDetails {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 70px;
+}
+
+.offerContainer .offerDetails h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 120px;
+    font-size: clamp(60px, 5vw, 90px);
+}
+
+.offerContainer .offerDetails p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.offerContainer .offerImageContainer {
+    position: relative;
+    flex-grow: 1;
+}
+
+.offerContainer .offerImageContainer img {
+    width: 100%;
+    height: auto;
+    max-width: 570px;
+}
+
+.offerContainer .offerImageContainer .offerPrice {
+    position: absolute;
+    right: 0;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.offerImageContainer .offerPrice .offerDash {
+    width: 150px;
+    height: 1px;
+    border: 1px solid var(--rasin-black);
+}
+
+@media screen and (max-width: 1110px) {
+    .offerSection {
+        padding: 0px 30px 0;
+    }
+
+    .offerSection .offerContainer {
+        flex-direction: column;
+        top: 70px;
+    }
+
+    .offerImageContainer .offerPrice .offerDash {
+        width: 70px;
+    }
+}

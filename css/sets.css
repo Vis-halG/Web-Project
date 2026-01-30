@@ -1,0 +1,134 @@
+/* / Sets/Products section styles */
+.setsSection {
+    display: flex;
+}
+
+.setsSection .setsCenter {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: var(--cultured);
+}
+
+.setsSection .setsLeft {
+    display: none;
+    width: 130px;
+    background-color: var(--cultured);
+}
+
+.setsSection .setsRight {
+    display: none;
+    width: 130px;
+    background-color: white;
+}
+
+@media screen and (min-width: 1110px) {
+    .setsSection .setsLeft,
+    .setsSection .setsRight {
+        display: block;
+    }
+}
+
+.setsSection .setsContainer {
+    padding-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+
+.productSet {
+    max-width: 450px;
+    flex-grow: 1;
+}
+
+.productSet .productSetHeading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productSet .productSetHeading .productSetHeadingText {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.productSetHeading .productSetButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.productSetHeading .productSetButtonContainer button {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: var(--text-silver);
+    gap: 10px;
+    font-family: "Roboto", sans-serif;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.productSetButtonContainer button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.productSet hr {
+    margin-top: 10px;
+}
+
+.productSet .productSetIcons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productSet .productSetIcons>div {
+    display: flex;
+    gap: 25px;
+}
+
+.productSet .productSetIcons>div img {
+    max-width: 150px;
+    height: 135px;
+    width: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+
+.productSet .productSetIcons>div h6 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.productSet .productSetIcons>div p {
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+.productSet .productSetIcons .productSetDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1320px) {
+    .setsContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .setsContainer .productSet.desktopOnly {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .setsContainer .productSet.desktopOnly {
+        display: block;
+    }
+}

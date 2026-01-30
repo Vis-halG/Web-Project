@@ -1,0 +1,109 @@
+ /* Blogs section styles */
+.blogsSection {
+    display: flex;
+}
+
+.blogsSection .blogCenter {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--bright-gray);
+}
+
+.blogsSection .blogLeft {
+    display: none;
+    width: 130px;
+    background-color: white;
+}
+
+.blogsSection .blogRight {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+@media screen and (min-width: 1110px) {
+    .blogsSection .blogLeft,
+    .blogsSection .blogRight {
+        display: block;
+    }
+}
+
+.blogContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.blogContainer .blogCard {
+    max-width: 350px;
+    background-color: white;
+}
+
+.blogContainer .blogCard img {
+    max-width: 350px;
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.blogContainer .blogContent {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blogCard .blogContent .blogHeading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blogCard .blogContent .blogHeading h4 {
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.blogCard .blogHeading p {
+    font-size: 12px;
+}
+
+.blogCard .blogDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blogCard .blogDetails p {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.blogCard .blogDetails div {
+    font-size: 12px;
+}
+
+.blogCard .blogDetails .blogReadMore {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.blogCard .blogDetails .blogDash {
+    width: 40px;
+    height: 2;
+    border: 1px solid var(--rasin-black);
+}
+
+@media screen and (max-width: 768px) {
+    .blogContainer {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

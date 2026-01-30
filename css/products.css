@@ -1,0 +1,233 @@
+
+.productsSection {
+    padding: 100px 20px;
+    background-color: var(--bright-gray);
+}
+
+/* Product Filter Button CSS */
+.productsSection .filterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.filterButton {
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-silver);
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.filterButton .triangle {
+    display: none;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: var(--rasin-black);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.filterButton.active {
+    color: white;
+    background-color: var(--rasin-black);
+}
+
+.filterButton.active .triangle {
+    display: block;
+}
+
+/* Product grid container */
+.productsContainer {
+    margin: 0 auto;
+    max-width: 1450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    row-gap: 50px;
+}
+
+.productCard {
+    display: none;
+    max-width: 330px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productCard.show {
+    display: flex;
+}
+
+.productCard .productImageContainer {
+    max-width: 330px;
+    height: 310px;
+    position: relative;
+}
+
+.productCard .productImageContainer .productStatus {
+    position: absolute;
+    color: white;
+    transform: rotate(270deg);
+    transform-origin: 50px 22px;
+    padding: 8px 20px;
+}
+
+.productCard .productImageContainer .productStatus.statusNew {
+    background-color: var(--rasin-black);
+}
+
+.productCard .productImageContainer .productStatus.statusHot {
+    background-color: #F5540D;
+    padding: 8px 23px;
+}
+
+.productCard .productImageContainer .productStatus.statusSale {
+    background-color: #189E14;
+}
+
+.productCard .productImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--cultured);
+}
+
+.productCard .productButtons {
+    background-color: var(--cultured);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+}
+
+.productCard .productButtons .productCartButton {
+    border-radius: 30px;
+    padding: 13px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    background: white;
+    border: none;
+}
+
+.productCard .productButtons button {
+    background-color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.productCard .productButtons button:hover {
+    transform: translateY(-5px);
+}
+
+.productCard .productDetails {
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+}
+
+.productCard .productDetails .productBrand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productCard .productDetails .productBrand p {
+    font-size: 14px;
+    color: var(--text-silver);
+}
+
+.productCard .productDetails .productBrand .productOffer {
+    color: white;
+    font-size: 16px;
+    padding: 2px 6px;
+    background-color: var(--rasin-black);
+}
+
+.productCard .productDetails .productPriceContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.productCard .productDetails .productPriceContainer .productPrice {
+    color: var(--text-silver);
+}
+
+.productButtonContainer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+ /* Product action buttons */
+.productButton {
+    position: relative;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--rasin-black);
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    border: 1px solid var(--rasin-black);
+    background: transparent;
+    transition: 0.1s;
+}
+
+.productButton .buttonText {
+    padding: 6px 23px;
+}
+
+.productButton .fa-circle {
+    font-size: 8px;
+}
+
+.productButton .fa-circle.circleOne {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.productButton .fa-circle.circleTwo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.productButton:hover {
+    transform: scale(1.07);
+}
+
+.productButton:hover .fa-circle.circleOne {
+    border-radius: 50%;
+    background-color: var(--rasin-black);
+}
+
+.productButton:hover .fa-circle.circleTwo {
+    border-radius: 50%;
+    background-color: var(--rasin-black);
+}

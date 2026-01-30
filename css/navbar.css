@@ -1,0 +1,199 @@
+
+
+.headerDetailsBackground {
+    display: none;
+    background-color: var(--bright-gray);
+}
+
+.headerDetails {
+    font-weight: 400;
+    padding: 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerDetails ul {
+    list-style-position: inside;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerDetails ul li {
+    list-style-type: none;
+}
+
+.headerDetails ul li::before {
+    content: "\2022";
+    padding-right: 10px;
+}
+
+.headerDetails ul .noBullet::before {
+    content: "";
+}
+
+.fa-heart {
+    font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+    .headerDetailsBackground {
+        display: block;
+    }
+}
+
+ /* Header and Navigation Bar */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.navigationBar {
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navigationBar .navigationTitle {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navigationBar .navigationTitle a {
+    text-decoration: none;
+    color: var(--rasin-black);
+}
+
+.navigationBar .navigationLinks {
+    display: flex;
+    gap: 60px;
+}
+
+.navigationBar .navigationLinks li {
+    list-style-type: none;
+}
+
+.navigationBar .navigationLinks li a {
+    color: var(--text-silver);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.navigationBar .navigationIcons {
+    display: flex;
+    gap: 30px;
+    color: var(--text-silver);
+    font-size: 14px;
+}
+
+.navigationBar .navigationIcons>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.navigationBar .navigationLinks li:hover a {
+    color: var(--black);
+}
+
+.navigationBar .toggleButton {
+    display: none;
+}
+
+.toggleButton .fa-solid {
+    font-size: 23px;
+}
+
+/* ============================================
+   DROPDOWN MENU STYLES
+   ============================================ */
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 140px;
+    width: 300px;
+    height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--bright-gray);
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdownMenu.open {
+    height: 320px;
+}
+
+.dropdownMenu .dropdownLinks {
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dropdownMenu .dropdownLinks a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--text-silver);
+}
+
+.dropdownMenu .dropdownIcons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--text-silver);
+}
+
+.dropdownMenu .dropdownIcons>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Navigation Responsiveness */
+@media screen and (max-width: 1110px) {
+    .navigationBar .navigationLinks {
+        display: none;
+    }
+
+    .navigationBar .navigationIcons {
+        display: none;
+    }
+
+    .dropdownMenu {
+        display: block;
+    }
+
+    .navigationBar .toggleButton {
+        display: block;
+    }
+}
+
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 768px) {
+    .dropdownMenu {
+        top: 70px;
+        left: 20px;
+        width: unset;
+    }
+
+    .dropdownMenu .dropdownIcons {
+        justify-content: flex-start;
+    }
+}

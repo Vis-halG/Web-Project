@@ -1,0 +1,157 @@
+
+.featuresSection {
+    display: flex;
+}
+
+.featuresSection .centerDiv {
+    width: 100%;
+}
+
+.featuresSection .leftColor {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+.featuresSection .rightColor {
+    display: none;
+    width: 130px;
+}
+
+@media screen and (min-width: 1110px) {
+    .featuresSection .leftColor,
+    .featuresSection .rightColor {
+        display: flex;
+    }
+}
+
+.featuresMain {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.featuresMain img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--cultured);
+}
+
+.featuresMain .featuresFlexOne {
+    display: flex;
+    gap: 30px;
+}
+
+.featuresMain .featuresFlexOne>div {
+    position: relative;
+    max-width: 560px;
+    max-height: 510px;
+    box-shadow: 0 0 2px #00000041;
+}
+
+.featuresMain .featuresFlexOne .featureTwo {
+    max-width: 340px;
+}
+
+.featuresMain .featuresFlexTwo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.featuresMain .featuresFlexTwo>div {
+    position: relative;
+    max-width: 450px;
+    max-height: 240px;
+    box-shadow: 0 0 2px #00000041;
+}
+
+@media screen and (max-width: 992px) {
+    .featuresMain {
+        flex-direction: column;
+    }
+
+    .featuresMain .featuresFlexTwo {
+        flex-direction: row;
+    }
+
+    .featuresMain .featuresFlexTwo>div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .featuresMain .featuresFlexOne {
+        flex-wrap: wrap;
+    }
+
+    .featuresMain .featuresFlexOne .featureTwo {
+        max-width: 100%;
+    }
+
+    .featuresMain .featuresFlexTwo {
+        flex-wrap: wrap;
+    }
+
+    .featuresMain .featuresFlexTwo>div {
+        max-width: 100%;
+    }
+}
+
+/* Feature card content styles */
+.featuresMain .featureDetails {
+    position: absolute;
+    padding: 20px;
+}
+
+.featuresMain .featureTwo .featureDetails {
+    bottom: 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(41deg, rgba(255, 255, 255, 1) 20%, rgba(252, 70, 107, 0) 53%);
+}
+
+.featuresMain .featureDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(148deg, rgba(255, 255, 255, 1) 20%, rgba(252, 70, 107, 0) 53%);
+}
+
+.featureDetails .featureContent .featureItemName {
+    font-weight: 700;
+    font-size: 32px;
+    font-family: "Playfair Display", serif;
+}
+
+.featureDetails .featureContent .featurePrice {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Features Button Styles */
+.featureDetails .featureButtonContainer {
+    margin-left: 5px;
+    border: 1px solid black;
+}
+
+.featureDetails .featureButtonContainer .featureButton {
+    padding: 10px 30px;
+    border: 1px solid black;
+    transform: translate(-5px, -5px);
+    transition: transform 0.2s ease-in;
+    background: white;
+    cursor: pointer;
+}
+
+.featureDetails .featureButtonContainer .featureButton:hover {
+    transform: translate(0);
+    cursor: pointer;
+}

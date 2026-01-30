@@ -1,0 +1,52 @@
+/* Decoration and architect section styles */
+.decorationSection {
+    padding: 100px 20px;
+    background-color: var(--bright-gray);
+}
+
+.architectSection {
+    padding: 100px 20px;
+    background-color: var(--cultured);
+}
+
+.architectSection .decorationContainer {
+    flex-wrap: wrap-reverse;
+}
+
+.decorationContainer {
+    max-width: 1450px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.decorationContainer .decorationDescription {
+    padding-top: 30px;
+    max-width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.decorationContainer .decorationDescription h3 {
+    font-weight: 700;
+    font-size: 36px;
+    font-family: "Playfair Display", serif;
+}
+
+.decorationContainer .decorationDescription p {
+    line-height: 25px;
+}
+
+@media screen and (max-width: 576px) {
+    .decorationSection,
+    .architectSection {
+        padding: 50px 20px;
+    }
+
+    .da-container .da-description {
+        padding-top: 0;
+    }
+}

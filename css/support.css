@@ -1,0 +1,70 @@
+/* Support section styles */
+.supportSection {
+    display: flex;
+}
+
+.supportSection .supportCenter {
+    width: 100%;
+}
+
+.supportSection .supportLeft {
+    display: none;
+    width: 130px;
+}
+
+.supportSection .supportRight {
+    display: none;
+    width: 130px;
+    background-color: var(--bright-gray);
+}
+
+@media screen and (min-width: 1110px) {
+    .supportSection .supportLeft,
+    .supportSection .supportRight {
+        display: block;
+    }
+}
+
+.supportContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+.supportContainer .supportItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.supportContainer .supportItem img {
+    width: 70px;
+    height: 70px;
+}
+
+.supportContainer .supportItem>div {
+    text-align: center;
+}
+
+.supportContainer .supportHeading {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 576px) {
+    .supportContainer {
+        flex-direction: column;
+    }
+
+    .supportContainer .supportItem img {
+        width: 50px;
+        height: 50px;
+    }
+}

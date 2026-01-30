@@ -1,0 +1,56 @@
+/* Newsletter section styles */
+.newsletterSection {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.sectionHeadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.sectionHeading {
+    font-weight: 700;
+    font-size: clamp(30px, 5vw, 46px);
+    font-family: "Playfair Display", serif;
+}
+
+.newsletterSection .newsInput {
+    width: 420px;
+    padding: 15px 20px;
+    background-color: var(--cultured);
+    border: none;
+}
+
+.newsletterSection .newsButton {
+    padding: 15px 45px;
+    border: none;
+    border-radius: 0px 4px 0px 4px;
+    color: white;
+    cursor: pointer;
+    background-color: var(--rasin-black);
+}
+
+@media screen and (max-width: 576px) {
+    .newsletterEmailSection {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .newsletterSection .newsInput {
+        width: 100%;
+    }
+
+    .newsletterSection .newsButton {
+        width: 100%;
+    }
+}

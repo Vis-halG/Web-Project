@@ -1,0 +1,44 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Playfair+Display:wght@400;500;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000;
+    --text-silver: #757575;
+    --cultured: #F5F5F5;
+    --bright-gray: #EEEEEE;
+    --rasin-black: #212121;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-silver);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rasin-black);
+}
+
+ /* Utility classes */
+.maxContainer {
+    margin: 0 auto;
+    max-width: 1400px;
+}
