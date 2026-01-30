@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const productCards = document.querySelectorAll('.product-card');
+    const filterButtons = document.querySelectorAll('.filterButton');
+    const productCards = document.querySelectorAll('.productCard');
 
     // Show all products by default
     productCards.forEach(function (card) {

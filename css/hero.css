@@ -80,12 +80,10 @@
     right: 10px;
 }
 
-.mainButton:hover {
-    transform: scale(1.05);
-}
 .mainButton:hover .fa-circle {
     border-radius: 50%;
     background-color: white;
+      transform: scale(1);
 }
 
 /* Hero Section Side Parts */ 
